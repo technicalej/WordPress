@@ -14,4 +14,4 @@ phases:
          - sed -i 's/localhost/'$Host'/' wp-config.php
 artifacts:
   files:
-    - **/*
+    - '**/*'
