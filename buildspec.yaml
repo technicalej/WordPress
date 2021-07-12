@@ -1,10 +1,10 @@
 version: 0.2
 env:
   parameter-store:
-    DB_Name: database_name_here
-    UserName: username_here
-    Password: password_here
-    Host: localhost
+    DB_Name: /CodeBuild/EKANSH_DB_NAME
+    UserName: /CodeBuild/EKANSH_USER_NAME
+    Password: /CodeBuild/EKANSH_PASS
+    Host: /CodeBuild/EKANSH_ENDPOINT
 phases:
     build:
        commands:
