@@ -1,10 +1,10 @@
 version: 0.2
 env:
   parameter-store:
-    DB_Name: "database_name_here"
-    UserName: "username_here"
-    Password: "password_here"
-    Host: "localhost"
+    DB_Name: database_name_here
+    UserName: username_here
+    Password: password_here
+    Host: localhost
 phases:
     build:
        commands:
