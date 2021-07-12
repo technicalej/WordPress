@@ -1,2 +1,3 @@
 #!/bin/bash
-systemctl start apache2
+sudo systemctl start nginx.service
+sudo systemctl enable nginx.service
