@@ -12,3 +12,6 @@ phases:
          - sed -i 's/username_here/'$UserName'/' wp-config.php
          - sed -i 's/password_here/'$Password'/' wp-config.php
          - sed -i 's/localhost/'$Host'/' wp-config.php
+artifacts:
+  files:
+    - **/*
