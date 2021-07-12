@@ -7,10 +7,10 @@ env:
     Host: "localhost"
 phases:
     build:
-    commands:
-      - echo Entered the build phase...
-      - mv wp-config-sample.php wp-config.php 
-      - sed 's/database_name_here/$DB_Name' wp-config.php 
-      - sed 's/username_here/$UserName' wp-config.php
-      - sed 's/password_here/$Password' wp-config.php
-      - sed 's/localhost/$Host' wp-config.php
+       commands:
+         - echo Entered the build phase...
+         - mv wp-config-sample.php wp-config.php 
+         - sed 's/database_name_here/$DB_Name' wp-config.php 
+         - sed 's/username_here/$UserName' wp-config.php
+         - sed 's/password_here/$Password' wp-config.php
+         - sed 's/localhost/$Host' wp-config.php
