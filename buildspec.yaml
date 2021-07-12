@@ -19,11 +19,10 @@ phases:
   build:
     commands:
       - echo Entered the build phase...
-      - mv wp-config-sample wp-config
-      - sed 's/database_name_here/$database_name_here'
-      - sed 's/username_here/$username_here'
-      - sed 's/password_here/$password_here'
-      - sed 's/localhost/$localhost'
+      - sed 's/database_name_here/$database_name_here' wp-config-sample 
+      - sed 's/username_here/$username_here' wp-config-sample
+      - sed 's/password_here/$password_here' wp-config-sample
+      - sed 's/localhost/$localhost' wp-config-sample
   post_build:
     commands:
       - echo Entered the post_build phase...
