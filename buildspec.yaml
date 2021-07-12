@@ -1,28 +1,16 @@
 version: 0.2
 env:
   parameter-store:
-    database_name_here: "database_name_here"
-    username_here: "username_here"
-    password_here: "password_here"
-    localhost: "localhost"
+    DB_Name: "database_name_here"
+    UserName: "username_here"
+    Password: "password_here"
+    Host: "localhost"
 phases:
-  install:
-    commands:
-      - echo Entered the install phase...
-    finally:
-      - echo This always runs even if the update or install command fails 
-  pre_build:
-    commands:
-      - echo Entered the pre_build phase...
-    finally:
-      - echo This always runs even if the login command fails 
-  build:
+    build:
     commands:
       - echo Entered the build phase...
-      - sed 's/database_name_here/$database_name_here' wp-config-sample 
-      - sed 's/username_here/$username_here' wp-config-sample
-      - sed 's/password_here/$password_here' wp-config-sample
-      - sed 's/localhost/$localhost' wp-config-sample
-  post_build:
-    commands:
-      - echo Entered the post_build phase...
+      - mv wp-config-sample.php wp-config.php 
+      - sed 's/database_name_here/$DB_Name' wp-config.php 
+      - sed 's/username_here/$UserName' wp-config.php
+      - sed 's/password_here/$Password' wp-config.php
+      - sed 's/localhost/$Host' wp-config.php
